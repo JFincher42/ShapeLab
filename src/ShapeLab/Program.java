@@ -10,6 +10,9 @@ public class Program extends PApplet {
 	public static final int WIDTH = 720;  // width of display in pixels   
 	public static final int HEIGHT = 720; // height of display in pixels
 
+	// Uncomment the line below for Activity 3 and 4
+	//Canvas canvas;
+
 	/**
 	 *  DO NOT MODIFY
 	 * Launch the Processing Application.
@@ -35,6 +38,10 @@ public class Program extends PApplet {
 	 */
 	public void setup() {
 		ShapeLab.setPApplet(this);
+		// Uncomment the line below for Activity 3 and 4
+		//canvas = new Canvas(WIDTH, HEIGHT);
+
+		// Comment the line below for Activity 3 and 4
 		noLoop();
 	}
 
@@ -43,16 +50,15 @@ public class Program extends PApplet {
 	 * Runs some simple tests, clears the display
 	 * and then calls the methods for the various Lab activities.
 	 */
-	public  void draw() {
+	public void draw() {
 		ShapeLabTester tester = new ShapeLabTester();
 		tester.basicTest();
-		//tester.gridTest();
+		tester.gridTest();
 		ShapeLab.clearDisplay(); // Clear the display after running the tests
-		introActivity();
-		
-		// For Activity 3, comment out the above code, and uncomment the below code.
-		// NOTE: Replace canvas with the name of your Canvas instance variable.
-		// canvas.animate(framecount);		// framecount is defined in PApplet.
+		runAllActivities();
+
+		// For Activity 3 and 4, comment out the above code, and uncomment the below code.
+		//canvas.animate(frameCount);		// frameCount is defined in PApplet.
 	}
 
 	/**
@@ -76,5 +82,4 @@ public class Program extends PApplet {
 		r.color = Color.makeColor(0, 128, 128); // The color teal (0% red, 50% green, 50% blue)
 		ShapeLab.drawRectangle(r);
 	}
-
 }

@@ -33,19 +33,25 @@ The following helper classes are also provided:
 
 Getting Started
 ---------------  
-Open the `Shapelab` project, open Program.java, and run it.
+Open the ShapeLab project, open Program.java, and run it.
 
-Verify that a new window is opened, and a teal-colored rectangle with a label that reads "This is a rectangle!"
+Verify that a new window is opened, and a teal-colored rectangle with a label that reads "This is a rectangle!" is displayed.
 
-Examine the code in the `Program` class.  You will find a method called `Program.runAllActivities`, which currently calls `Program.introActivity`.  As you add new methods to the various shape classes, you will add calls to those methods here.  
+Examine the code in the `Program` class.  You will find a method called `Program.runAllActivities()`, which currently calls `Program.introActivity()`.  As you add new methods to the various shape classes, you will add calls to those methods here.
+
+Experiment with the `ShapeLabTester.basicTest()` and `ShapeLabTester.gridTest()` methods.  How would you get them to display?  
 
 Activity 1: Geometric Primitives (10 points + 5 EC)
 --------------------------------
-In this activity, you will draw all the basic shapes, and add constructors to understand how to modify your code to use new object features.
+In this activity, you will draw all the basic shapes, and add new constructors to understand how to modify your code to use new object features.
 
-1. Modify `Program.introActivity()` so that it creates and displays examples of all the geometric primitives (Point, Line, Rectangle, Ellipse and Triangle). Use different colors and labels where available. Save screenshots showing each type (it could be one display showing multiple geometric types) to the images folder.
-2. Add a suitable constructor to at least two (2) primitive types, and modify the code you added in `Program.introActivity()` so that it calls this constructor instead of setting up the field variables after the object is created.
-    * Extra Credit: Add new constructors to all five primitive shape types.
+1. Modify `Program.introActivity()` so that it creates and displays examples of all the geometric primitives (Point, Line, Rectangle, Ellipse and Triangle).
+    * Use different colors and labels where available.
+    * Save screenshots showing each type (it could be one display showing multiple geometric types) to the images folder.
+2. Add a new constructor to at least two (2) primitive types.
+    * The new constructor should remove the need to setting up the shapes field variables.
+    * Modify the code you added in `Program.introActivity()` so that it calls this constructor.
+    * Extra Credit: Add new constructors to all five (5) primitive shape types, and modify the code to use them.
 
 Make sure you submit and push your code to GitHub after completion of this activity.
     
@@ -54,7 +60,7 @@ Activity 2: Make Your Own Pattern (10 points + 5 EC)
 In this activity, you will combine the various shapes into a single coherent pattern of your own design.
 
 1. Add `public static method compositePatternActivity()` to the Program class, and call it from `Program.runAllActivities()`.
-    It should have the same signature (header) as `Program.introPatternActivity()`. The method will (eventually) draw a complex geometric pattern of your own design.
+    * It should have the same signature (header) as `Program.introPatternActivity()`. The method will (eventually) draw a complex geometric pattern of your own design.
 2. Add code to `Program.compositePatternActivity()` based on these guidelines:
     * `Program.compositePatternActivity()` must draw a coherent pattern/design of your own design.
     * The pattern must use at least two (2) of each type of geometric primitive.
@@ -63,12 +69,12 @@ In this activity, you will combine the various shapes into a single coherent pat
 
 General coding guidelines apply, including:
 * Adding comments where appropriate
-* Use program decomposition to organize your program – define additional private methods for sub-operations where appropriate.
+* Use program decomposition to organize your program – define additional `private` methods for sub-operations where appropriate.
 * You can make changes to the shape objects if necessary, but make sure you don't break earlier functionality by doing so (for example, changing the signature of a method you use somewhere else). 
 
 Make sure you submit and push your code to GitHub after completion of this activity.
 
-Activity 3: Animation (10 points + 5 EC)
+Activity 3: Animation (10 points)
 ---------------------
 In this activity, you will setup classes to animate shapes by repeatedly mutating and redrawing them.
 
@@ -76,7 +82,8 @@ To begin, follow these steps:
 1. In your Program class, add a new instance variable of type Canvas.
 2. Initialize the Canvas variable in the `Program.setup()` method.
     * When you do so, comment out the existing call to `noLoop()` you find there.
-3.  Answer the following questions and post them to a OneNote page called "Lab 4 - Activity 3":
+3. Comment out the first five (5) lines of the `Program.draw()` method, and uncomment the last line, as indicated in the method. 
+4.  Answer the following questions and post them to a OneNote page called "Lab 4 - Activity 3":
     * List all instance variables of your Canvas field (just the names).
     * What is the value of `r.x` after the first call to `animate()` completes?
     * Roughly how many times will `animate()` have been called after 3 seconds have elapsed?
