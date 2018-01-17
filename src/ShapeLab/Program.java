@@ -52,8 +52,8 @@ public class Program extends PApplet {
 	 */
 	public void draw() {
 		ShapeLabTester tester = new ShapeLabTester();
-		tester.basicTest();
-		tester.gridTest();
+		//tester.basicTest();
+		//tester.gridTest();
 		ShapeLab.clearDisplay(); // Clear the display after running the tests
 		runAllActivities();
 
