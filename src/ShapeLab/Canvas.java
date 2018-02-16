@@ -11,7 +11,9 @@ public class Canvas {
 	public Canvas(int w, int h) {
 		displayWidth = w;
 		displayHeight = h;
-		r = new Rectangle(10, 20, 30, 40); // This assumes Rectangle already has a constructor
+//		r = new Rectangle(10, 20, 30, 40); // This assumes Rectangle already has a constructor
+		r = new Rectangle();
+		r.x=50;  r.y=50;  r.width=100; r.height=100;
 	}
 
 	// This method  will be called approximately 30 times per second.

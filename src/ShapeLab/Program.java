@@ -11,7 +11,7 @@ public class Program extends PApplet {
 	public static final int HEIGHT = 720; // height of display in pixels
 
 	// Uncomment the line below for Activity 3 and 4
-	//Canvas canvas;
+	Canvas canvas;
 
 	/**
 	 *  DO NOT MODIFY
@@ -39,10 +39,10 @@ public class Program extends PApplet {
 	public void setup() {
 		ShapeLab.setPApplet(this);
 		// Uncomment the line below for Activity 3 and 4
-		//canvas = new Canvas(WIDTH, HEIGHT);
+		canvas = new Canvas(WIDTH, HEIGHT);
 
 		// Comment the line below for Activity 3 and 4
-		noLoop();
+//		noLoop();
 	}
 
 	/**
@@ -51,14 +51,14 @@ public class Program extends PApplet {
 	 * and then calls the methods for the various Lab activities.
 	 */
 	public void draw() {
-		ShapeLabTester tester = new ShapeLabTester();
-		//tester.basicTest();
-		//tester.gridTest();
-		ShapeLab.clearDisplay(); // Clear the display after running the tests
-		runAllActivities();
+//		ShapeLabTester tester = new ShapeLabTester();
+//		tester.basicTest();
+//		//tester.gridTest();
+//		ShapeLab.clearDisplay(); // Clear the display after running the tests
+//		runAllActivities();
 
 		// For Activity 3 and 4, comment out the above code, and uncomment the below code.
-		//canvas.animate(frameCount);		// frameCount is defined in PApplet.
+		canvas.animate(frameCount);		// frameCount is defined in PApplet.
 	}
 
 	/**
